@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clappr M3U Player</title>
+</head>
+<body>
+
+    <!-- Player container -->
+    <div id="player"></div>
+
+    <!-- Clappr Script -->
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+
+    <script>
+        // Initialize Clappr player with M3U playlist URL
+        var player = new Clappr.Player({
+            source: "https://raw.githubusercontent.com/your-username/your-repository/main/your-file.m3u",
+            mimeType: "application/x-mpegURL", // HLS streaming type for M3U8 files
+            parentId: "#player", // Div container for the player
+            width: '100%',  // Player width
+            height: 360     // Player height
+        });
+    </script>
+
+</body>
+</html>
